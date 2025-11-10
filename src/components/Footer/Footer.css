@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* Footer Base */
+.footer {
+  background: linear-gradient(135deg, #f8f9fa 0%, #eaf7ff 100%);
+  color: #212529;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  padding: 30px 0 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated Top Line */
+.footer-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, #007bff, #00bfa6, #007bff);
+  background-size: 300% 100%;
+  animation: lineMove 6s linear infinite;
+}
+
+@keyframes lineMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 300% 0;
+  }
+}
+
+/* Footer Content */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Navigation Links */
+.footer-links {
+  display: flex;
+  list-style: none;
+  gap: 18px;
+  padding: 0;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.footer-links li {
+  cursor: pointer;
+  font-weight: 500;
+  color: #007bff;
+  transition: all 0.3s ease;
+}
+
+.footer-links li:hover {
+  color: #00bfa6;
+  transform: translateY(-2px);
+}
+
+/* Social Icons */
+.footer-social {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.footer-social a {
+  color: #007bff;
+  font-size: 1.3rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #00bfa6;
+  transform: translateY(-3px);
+}
+
+/* Copyright */
+.footer-copy {
+  font-size: 0.85rem;
+  color: #495057;
+  margin-top: 10px;
+}
+
+.footer-copy span {
+  font-weight: 600;
+  color: #007bff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-links {
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+
+  .footer-social a {
+    font-size: 1.1rem;
+  }
+
+  .footer-copy {
+    font-size: 0.8rem;
+  }
+}
