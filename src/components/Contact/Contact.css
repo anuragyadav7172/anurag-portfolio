@@ -1,0 +1,17 @@
+/* Success & Error Alert Styling */
+.alert-success {
+  background: #e6ffed;
+  border: 1px solid #00bfa6;
+  color: #00bfa6;
+}
+
+.alert-danger {
+  background: #ffe6e6;
+  border: 1px solid #ff4d4d;
+  color: #d22f2f;
+}
+
+/* Spinner alignment inside button */
+button .spinner-border {
+  vertical-align: middle;
+}
