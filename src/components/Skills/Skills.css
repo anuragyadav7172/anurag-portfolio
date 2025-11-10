@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+.skills-section {
+  background: linear-gradient(135deg, #f9fbff 0%, #eaf7ff 100%);
+  font-family: "Poppins", sans-serif;
+}
+
+.section-title {
+  color: #007bff;
+  font-weight: 700;
+  font-size: 1.8rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  width: 50px;
+  height: 3px;
+  background: #00bfa6;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.skills-heading {
+  font-weight: 600;
+  color: #00bfa6;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+/* --- Skill Cards (with logo) --- */
+.skill-card {
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 16px;
+  background-color: #ffffff;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 123, 255, 0.25);
+}
+
+/* --- Skill Name Below the Card --- */
+.skill-name {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #212529;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.skill-link {
+  text-decoration: none;
+}
+
+.skill-link:hover .skill-name {
+  color: #00bfa6;
+  transform: translateY(-2px);
+}
+
+/* --- Responsive Tweaks --- */
+@media (max-width: 768px) {
+  .skill-card {
+    width: 70px;
+    height: 70px;
+    background-size: 65%;
+  }
+  .skill-name {
+    font-size: 0.8rem;
+  }
+}
