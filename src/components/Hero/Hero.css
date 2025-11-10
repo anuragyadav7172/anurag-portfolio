@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* ---- Hero Section with Animated Background ---- */
+.hero-animated {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  padding-top: 80px;
+  color: #212529;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ===== Floating Animated Circles ===== */
+.bg-animation {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.4;
+  animation: float 20s infinite ease-in-out;
+}
+
+.circle1 {
+  width: 250px;
+  height: 250px;
+  background: #007bff;
+  top: -80px;
+  left: -80px;
+  animation-delay: 0s;
+}
+
+.circle2 {
+  width: 300px;
+  height: 300px;
+  background: #00bfa6;
+  bottom: -100px;
+  right: -100px;
+  animation-delay: 5s;
+}
+
+.circle3 {
+  width: 200px;
+  height: 200px;
+  background: #007bff;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  animation-delay: 10s;
+}
+
+/* Floating animation keyframes */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-30px) scale(1.05);
+    opacity: 0.6;
+  }
+}
+
+/* ===== Text Styling ===== */
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #212529;
+  line-height: 1.2;
+  z-index: 2;
+  position: relative;
+}
+
+.highlight {
+  color: #007bff;
+}
+
+.hero-role {
+  font-weight: 500;
+  color: #00bfa6;
+  z-index: 2;
+  position: relative;
+}
+
+.hero-desc {
+  font-size: 1rem;
+  color: #555;
+  max-width: 520px;
+  z-index: 2;
+  position: relative;
+}
+
+.hero-btn,
+.hero-btn-outline {
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.hero-btn:hover {
+  transform: translateY(-2px);
+}
+
+.hero-btn-outline {
+  border: 2px solid #007bff;
+  color: #007bff;
+  background-color: transparent;
+}
+
+.hero-btn-outline:hover {
+  background-color: #007bff;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ===== Profile Image ===== */
+.image-box {
+  display: inline-block;
+  background-color: white;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.image-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.hero-photo {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .hero-animated {
+    text-align: center;
+    padding-top: 100px;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-photo {
+    width: 200px;
+    height: 200px;
+  }
+}
